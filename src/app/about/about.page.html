@@ -1,0 +1,75 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title></ion-title>
+    <ion-buttons slot="start">
+      <ion-menu-button menu="main-menu"></ion-menu-button>
+      </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-button id="open-modal" expand="block">About</ion-button>
+  <ion-modal #modal trigger="open-modal">
+    <ng-template>
+      <ion-content>
+        <ion-toolbar>
+          <ion-title>Members</ion-title>
+          <ion-buttons slot="end">
+            <ion-button color="light" (click)="modal.dismiss()">Close</ion-button>
+          </ion-buttons>
+        </ion-toolbar>
+        <ion-list>
+          <ion-item>
+            <ion-avatar slot="start">
+              <ion-img src="../../assets/j.jpg"></ion-img>
+            </ion-avatar>
+            <ion-label>
+              <h2>Janus Lorenz Ramos</h2>
+              <p>BSIT-3B</p>
+            </ion-label>
+          </ion-item>
+          <ion-item>
+            <ion-avatar slot="start">
+              <ion-img src="../../assets/br.jpg"></ion-img>
+            </ion-avatar>
+            <ion-label>
+              <h2>BruceWayne Balmediano</h2>
+              <p>BSIT-3B</p>
+            </ion-label>
+          </ion-item>
+          <ion-item>
+            <ion-avatar slot="start">
+              <ion-img src="../../assets/th.jpg"></ion-img>
+            </ion-avatar>
+            <ion-label>
+              <h2>Thomas Alfred Binuya lll</h2>
+              <p>Director of Operations</p>
+              
+            </ion-label>
+          </ion-item>
+        </ion-list>
+      </ion-content>
+    </ng-template>
+  </ion-modal>
+</ion-content>
+
+<ion-content class="ion-padding">
+  <ion-modal
+    trigger="open-modal"
+    [initialBreakpoint]="0.25"
+    [breakpoints]="[0, 0.25, 0.5, 0.75]"
+    handleBehavior="cycle"
+  >
+    <ng-template>
+      <ion-content class="ion-padding">
+        <div class="ion-margin-top">
+          <ion-label>Our team work hard to provide a suitable app that the student can use for reading Noli Me Tangere, in this app they will experience a great UI design less hastle
+            more effecient and easy to use. 
+          </ion-label>
+        </div>
+      </ion-content>
+    </ng-template>
+  </ion-modal>
+</ion-content>
+
+
